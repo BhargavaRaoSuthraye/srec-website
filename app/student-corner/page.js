@@ -1,18 +1,12 @@
-import Hero from "../components/home/Hero";
-import Programs from "../components/home/Programs";
-import PlacementsPreview from "../components/home/PlacementsPreview";
-import CampusPreview from "../components/home/CampusPreview";
-import Testimonials from "../components/home/Testimonials";
-import "../styles/home.css";
-
-export default function Home() {
+export default function StudentCorner() {
   return (
     <>
-      <Hero />
-      <Programs />
-      <PlacementsPreview />
-      <CampusPreview />
-      <Testimonials />
+      <h1 style={{ padding: "20px", fontSize: "24px" }}>
+        Student Corner Page
+      </h1>
+      <p style={{ padding: "20px" }}>
+        Welcome to Student Corner 🚀
+      </p>
     </>
   );
 }
