@@ -1,0 +1,186 @@
+/* ================= RESET ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ================= BODY ================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f9fafb;
+  color: #1f2937;
+  overflow-x: hidden;
+}
+
+/* REMOVE IMAGE GAP ISSUE */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ================= PAGE CONTAINER ================= */
+.page-container {
+  padding: 80px 10%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* ================= TITLE ================= */
+.page-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 25px;
+  letter-spacing: 0.5px;
+}
+
+/* ================= CONTENT ================= */
+.page-content {
+  font-size: 18px;
+  color: #4b5563;
+  line-height: 1.8;
+  max-width: 900px;
+}
+
+/* ================= GRID ================= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 50px;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+/* TOP BORDER ACCENT */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #2563eb;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* CHANGE BORDER COLOR ON HOVER */
+.card:hover::before {
+  background: #fbbf24;
+}
+
+/* CARD TITLE */
+.card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e3a8a;
+  margin-bottom: 10px;
+}
+
+/* CARD TEXT */
+.card p {
+  font-size: 15.5px;
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+/* ================= HERO FIX ================= */
+/* Removes gap between navbar & hero */
+.hero,
+.gov-hero {
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= SECTION SPACING ================= */
+section {
+  margin: 0;
+  padding: 0;
+}
+
+/* ================= LINK RESET ================= */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= BUTTON RESET ================= */
+button {
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+/* ================= SCROLLBAR (PREMIUM LOOK) ================= */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2563eb;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 60px 6%;
+  }
+
+  .page-title {
+    font-size: 30px;
+  }
+
+  .page-content {
+    font-size: 16px;
+  }
+
+  .card-grid {
+    gap: 20px;
+  }
+}
+/* REMOVE ALL GAPS */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* HERO FIX */
+.gov-hero {
+  margin: 0;
+  padding: 0;
+}
+
+/* REMOVE SECTION GAP */
+section {
+  margin: 0;
+  padding: 0;
+}
+.gov-container {
+  padding: 0 10%;   /* remove top space */
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 🔥 prevents scroll */
+}

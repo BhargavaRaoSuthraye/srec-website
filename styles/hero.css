@@ -1,0 +1,95 @@
+/* ================= HERO BANNER ================= */
+.hero-banner {
+  position: relative;
+  width: 100vw;
+  height: 70vh; /* bigger premium look */
+  margin-left: calc(-50vw + 50%); /* full width fix */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ================= OVERLAY ================= */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 30, 70, 0.75); /* premium blue overlay */
+  backdrop-filter: blur(2px);
+}
+
+/* ================= TEXT ================= */
+.hero-text {
+  position: relative;
+  text-align: center;
+  color: white;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 20px;
+}
+
+/* TITLE */
+.hero-text h1 {
+  font-size: 64px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+/* SUBTEXT */
+.hero-text p {
+  font-size: 20px;
+  color: #dbeafe;
+  letter-spacing: 1px;
+  line-height: 1.6;
+}
+
+/* ================= OPTIONAL ANIMATION ================= */
+.hero-text h1,
+.hero-text p {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 50vh;
+  }
+
+  .hero-text h1 {
+    font-size: 36px;
+  }
+
+  .hero-text p {
+    font-size: 16px;
+  }
+}
+.gov-hero {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  overflow: hidden;
+  margin-top: 0; /* 🔥 FIX */
+}
+
+.gov-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; /* 🔥 removes gap */
+}

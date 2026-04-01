@@ -1,0 +1,248 @@
+/* ===== TOP BAR ===== */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 8%;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* LEFT */
+.top-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.top-left img {
+  width: 50px;
+}
+
+.college-name {
+  font-weight: 600;
+  font-size: 18px;
+  color: #1e3a8a;
+  letter-spacing: 0.5px;
+}
+
+/* RIGHT */
+.top-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* SMALL LINKS */
+.top-right span {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1e3a8a;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.top-right span:hover {
+  color: #2563eb;
+}
+
+/* BUTTON */
+.campus-btn {
+  background: #fbbf24;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.campus-btn:hover {
+  background: #f59e0b;
+  transform: translateY(-1px);
+}
+
+/* CODE */
+.code-box {
+  background: #2563eb;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+/* NBA */
+.nba-logo {
+  width: 42px;
+  object-fit: contain;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  background: #1e3a8a;
+  padding: 14px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  /* PREMIUM SHADOW */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* LINKS */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+/* TEXT */
+.nav-links a,
+.nav-links span {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 5px 0;
+}
+
+/* HOVER EFFECT */
+.nav-links li:hover > a,
+.nav-links li:hover > span {
+  color: #fbbf24;
+}
+
+/* UNDERLINE ANIMATION */
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #fbbf24;
+  bottom: -4px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+}
+
+/* ===== DROPDOWN ===== */
+.dropdown {
+  position: relative;
+}
+
+/* MENU */
+.dropdown-menu {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #ffffff;
+  padding: 10px 0;
+  border-radius: 10px;
+  min-width: 220px;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+/* SHOW */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* ITEMS */
+.dropdown-menu li {
+  padding: 12px 20px;
+  transition: 0.3s;
+}
+
+.dropdown-menu li a {
+  color: #1e293b;
+  font-size: 14px;
+  display: block;
+}
+
+/* HOVER */
+.dropdown-menu li:hover {
+  background: #eef2ff;
+}
+
+/* ===== REMOVE GAP ISSUE ===== */
+.dropdown::after {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  bottom: -20px;
+  left: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .topbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .top-right {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .navbar {
+    padding: 12px 5%;
+  }
+}
+/* REMOVE BULLETS */
+.dropdown-menu {
+  list-style: none;
+  margin: 0;
+  padding: 10px 0;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+.navbar {
+  background: #1e3a8a;
+  padding: 14px 8%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  margin-bottom: 0;   /* 🔥 FIX */
+}
+.nav-links {
+  list-style: none;
+}
+.navbar {
+  margin-bottom: 0;
+}
+
+.topbar {
+  margin-bottom: 0;
+}
